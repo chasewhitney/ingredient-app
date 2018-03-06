@@ -11,6 +11,11 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(express.static('./server/public'));
 
+app.get('/getIngredientList', function(req, res){
+  // data = {data:ingredientList};
+  res.send(ingredientList);
+});
+
 app.get('/*', function(req, res) {
   var file = req.params[0] || '/views/index.html';
   res.sendFile(path.join(__dirname, '/public/', file));
