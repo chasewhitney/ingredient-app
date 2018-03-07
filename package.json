@@ -19,6 +19,8 @@
   "homepage": "https://github.com/chasewhitney/ingredient-app#readme",
   "dependencies": {
     "angular": "^1.6.9",
+    "angular-animate": "^1.6.9",
+    "angular-material": "^1.1.7",
     "body-parser": "^1.18.2",
     "cheerio": "^1.0.0-rc.2",
     "express": "^4.16.2",

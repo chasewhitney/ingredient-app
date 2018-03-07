@@ -6,6 +6,9 @@ var request = require('request');
 var port = 5001;
 var cheerio = require('cheerio');
 
+var ingredientList = []; // Will store ingredients list from skin care website
+var url = process.env.URL || require('../config.js').url;
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
@@ -21,8 +24,6 @@ app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname, '/public/', file));
 });
 
-var ingredientList = [];
-var url = process.env.URL || require('../config.js').url;
 
 // Pull data from website and create an array of objects with name and rating of ingredients
 request(url, function(err, resp, html) {
