@@ -6,12 +6,27 @@
     <script type="text/javascript" src="./vendors/angular.min.js"></script>
     <script type="text/javascript" src="./scripts/client.js"></script>
 
-    <link href="vendors/angular-material.css" rel="stylesheet" type="text/css">
+
     <script type="text/javascript" src="./vendors/angular-material.js"></script>
     <script type="text/javascript" src="./vendors/angular-animate.min.js"></script>
-    <link href="styles.css" rel="stylesheet" type="text/css">
+
+    <link href="vendors/angular-material.css" rel="stylesheet" type="text/css">
+    <link href="views/styles.css" rel="stylesheet" type="text/css">
   </head>
   <body ng-app="myApp" ng-controller="MyController">
-    test is: {{test}}
+    <p>
+      TEMP for copy/paste: naPCa, myrrh, polyhydroxy acid, testfail extract, red raspberry extract, Saccharomyces lysate
+    </p>
+    <div>
+      <label>INGREDIENTS</label>
+      <textarea form="ingForm" ng-model="userIngredients" placeholder="Enter list of ingredients here, with each ingredient separated by a comma"></textarea>
+      <md-button class="md-raised md-accent" name="searchBtn" ng-disabled="false" ng-click="searchList(userIngredients)">SEARCH</md-button>
+    </div>
+
+    <div ng-repeat="ing in ingRatings">
+      <p>{{ing.rating}} - {{ing.name}}</p>
+    </div>
+
+
   </body>
 </html>
