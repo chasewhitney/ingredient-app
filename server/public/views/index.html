@@ -6,11 +6,12 @@
     <script type="text/javascript" src="./vendors/angular.min.js"></script>
     <script type="text/javascript" src="./scripts/client.js"></script>
 
-
-    <script type="text/javascript" src="./vendors/angular-material.js"></script>
-    <script type="text/javascript" src="./vendors/angular-animate.min.js"></script>
-
     <link href="vendors/angular-material.css" rel="stylesheet" type="text/css">
+        <script src="vendors/angular-animate.min.js" charset="utf-8"></script>
+        <script src="vendors/angular-aria.min.js" charset="utf-8"></script>
+        <script src="vendors/angular-messages.min.js" charset="utf-8"></script>
+        <script src="vendors/angular-material.js" charset="utf-8"></script>
+
     <link href="views/styles.css" rel="stylesheet" type="text/css">
   </head>
   <body ng-app="myApp" ng-controller="MyController">
@@ -19,8 +20,9 @@
     </p>
     <div>
       <label>INGREDIENTS</label>
-      <textarea form="ingForm" ng-model="userIngredients" placeholder="Enter list of ingredients here, with each ingredient separated by a comma"></textarea>
-      <md-button class="md-raised md-accent" name="searchBtn" ng-disabled="false" ng-click="searchList(userIngredients)">SEARCH</md-button>
+      <textarea ng-model="userIngredients" placeholder="Enter list of ingredients here, with each ingredient separated by a comma"></textarea>
+
+      <md-button class="md-raised md-primary" ng-click="searchList(userIngredients)">SEARCH</md-button>
     </div>
 
     <div ng-repeat="ing in ingRatings">

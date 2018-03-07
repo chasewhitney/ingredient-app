@@ -1,5 +1,5 @@
 console.log('client.js sourced');
-var myApp = angular.module('myApp', []);
+var myApp = angular.module('myApp', ['ngMaterial', 'ngMessages']);
 
 myApp.controller('MyController', function($http, $scope) {
 
