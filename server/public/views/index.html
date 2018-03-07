@@ -14,14 +14,14 @@
   </head>
   <body ng-app="myApp" ng-controller="MyController">
     <p>
-      TEMP for copy/paste: naPCa, myrrh, polyhydroxy acid, testfail extract, red raspberry extract, Saccharomyces lysate
+      TEMP copy/paste list for testing: naPCa, myrrh, polyhydroxy acid, testfail extract, red raspberry extract, Saccharomyces lysate
     </p>
     <div>
       <label>INGREDIENTS</label>
       <textarea ng-model="userIngredients" placeholder="Enter list of ingredients here, with each ingredient separated by a comma"></textarea>
       <md-button class="md-raised md-primary" ng-click="searchList(userIngredients)">SEARCH</md-button>
     </div>
-    <div ng-repeat="ing in ingRatings">
+    <div ng-repeat="ing in ingredientRatings">
       <p>{{ing.rating}} - {{ing.name}}</p>
     </div>
   </body>
