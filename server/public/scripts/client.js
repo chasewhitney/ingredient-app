@@ -18,7 +18,12 @@ myApp.controller('MyController', function($http, $scope) {
   // If match isn't found, rating property becomes 'unknown'
   $scope.searchList = function(userIngredientList){
     console.log('in searchList');
-    $scope.listToCheck = userIngredientList.split(", ");
+
+    // var temp = "naPCa, myrrh, polyhydroxy acid, testfail extract, red raspberry extract, Saccharomyces lysate";
+    // $scope.listToCheck = temp.split(", "); ///// <---TEMPORARY----^
+
+    $scope.listToCheck = userIngredientList.split(", "); ///// TEMPORARY COMMENT
+
     console.log("listToCheck is:", $scope.listToCheck);
     $scope.ingredientRatings = [];
     for (var i = 0; i < $scope.listToCheck.length; i++) {

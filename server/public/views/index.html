@@ -19,13 +19,8 @@
     <div class="banner">
       <h1>Karen's Skincare Resource</h1>
     </div>
-
-    <p style="text-align:center; font-size:12px">
-      TEMP copy/paste list for testing: naPCa, myrrh, polyhydroxy acid, testfail extract, red raspberry extract, Saccharomyces lysate
-    </p>
-
     <div layout="row">
-      <div class="inputColumn" layout="column" flex="30">
+      <div class="inputColumn" layout="column" flex="40">
         <div>
           <h1>INGREDIENTS</h1>
         </div>
@@ -34,14 +29,24 @@
           <md-button class="md-raised md-primary" ng-click="searchList(userIngredients)">SEARCH</md-button>
         </div>
       </div>
-      <div class="outputColumn" layout="column" flex="70">
-        <div class="listItem" ng-repeat="ing in ingredientRatings">
-          <span>{{ing.rating}}</span> - <span></span><span>{{ing.name}}</span>
-        </div>
+      <div class="outputColumn" layout="column" flex="60">
+        <table class="ratingTable">
+          <th>
+            <tr class="ratingTableHead">
+              <td>RATING</td>
+              <td>INGREDIENT</td>
+            </tr>
+          </th>
+          <tr ng-repeat="ing in ingredientRatings" style="border: 1px solid black">
+            <td ng-class="ing.rating.toLowerCase()" class="rating">{{ing.rating.toUpperCase()}}</td>
+            <td>{{ing.name.toUpperCase()}}</td>
+          </tr>
+
+        </table>
+        <!-- <div class="listItem" ng-repeat="ing in ingredientRatings">
+          <span class="">{{ing.rating}}</span> - <span></span><span>{{ing.name}}</span>
+        </div> -->
       </div>
-
-
-
     </div>
   </div>
 </body>

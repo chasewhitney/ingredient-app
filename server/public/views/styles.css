@@ -1,6 +1,10 @@
 body, html {
   margin: 0px;
-  padding: 0px;
+  padding: 1px;
+  background-color: #fff;
+  background-image: url(floral-bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .banner {
@@ -13,7 +17,6 @@ body, html {
 .banner h1 {
   font-size: 80px;
   font-weight: bold;
-  /* background-color:red; */
   text-align: center;
   font-family: 'Shadows Into Light', cursive;
   margin: 0px;
@@ -37,16 +40,50 @@ body, html {
 
 .outputColumn {
   padding: 50px 50px 50px 50px;
-  color:red;
   font-family: 'Shadows Into Light', cursive;
-
-
 }
 
-.listItem span{
+table {
   font-size: 32px;
-  margin: 0px;
-  padding: 0px;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+td {
+  border: 1px solid #dadada;
+  padding: 5px 10px 5px 10px;
+}
+
+tr:nth-child(odd) {
+  background-color: #fbfaf7;
+}
+
+.ratingTableHead {
+  text-align:center;
   font-weight: bold;
-  letter-spacing: 1px;
+}
+
+.rating{
+ text-align: center;
+}
+
+.good {
+  color: green;
+}
+
+.poor {
+  color: red;
+}
+
+.best {
+  color: purple;
+}
+
+.average {
+  color: black;
+}
+
+.unknown {
+  color: gray;
 }
