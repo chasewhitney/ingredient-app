@@ -3,7 +3,7 @@ var app = express();
 var bodyParser = require('body-parser');
 var path = require('path');
 var request = require('request');
-var port = 5001;
+var port = process.env.PORT || 5001;
 var cheerio = require('cheerio');
 
 var ingredientList = []; // Will store ingredients list from skin care website
